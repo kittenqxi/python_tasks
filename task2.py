@@ -10,18 +10,37 @@
 #     i+=1
 # print(maxx)
 
-a=int(input())
-b=int(input())
-maxx=0
+# a=int(input())
+# b=int(input())
+# maxx=0
+# i=0
+# while i<a:
+#     j=0
+#     while j<b:
+#         num=int(input())
+#         if i==0 and j==0:
+#             maxx=num
+#         if num>maxx:
+#             maxx=num
+#         j+=1
+#     i+=1
+# print('Maximum element: ', maxx)
+
+matrix=[[5, 1, 9], [2, 11, 3], [7, 4, 6]]
+n=0 
+while n<len(matrix):
+    n+=1
+m=0
+if n>0:
+    while m<len(matrix[0]):
+        m+=1
+maxx=matrix[0][0]
 i=0
-while i<a:
+while i<n:
     j=0
-    while j<b:
-        num=int(input())
-        if i==0 and j==0:
-            maxx=num
-        if num>maxx:
-            maxx=num
+    while j<m:
+        if matrix[i][j]>maxx:
+            maxx=matrix[i][j]
         j+=1
     i+=1
-print('Maximum element: ', maxx)
+print(maxx)
